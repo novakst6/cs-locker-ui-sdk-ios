@@ -1,4 +1,4 @@
-//
+﻿//
 //  LockerUI.swift
 //  CoreSDKTestApp
 //
@@ -144,18 +144,14 @@ internal enum LockerUIActivities: String {
         }
     }
     
-    
     class func localized( _ string: String ) -> String
     {
         let localized =  NSLocalizedString( string, tableName: nil, bundle: LockerUI.getBundle(), value: "", comment: "")
         return localized
     }
     
-    fileprivate static var _sharedInstance : LockerUI?
-    
-    // sharedInstance doesnt need to conform to protocol LockerUIApi and since it cannot be represented in obj-C it has been changed to LockerUI class.
-    @objc public class var sharedInstance: LockerUI {
-        if let instance = _sharedInstance {
+    public class var sharedInstance: LockerUI {
+        if let instance = _sharedInstance{
             return instance
         } else {
             let instance = LockerUI()
@@ -163,6 +159,8 @@ internal enum LockerUIActivities: String {
             return instance
         }
     }
+    
+    fileprivate static var _sharedInstance : LockerUI?
     
     internal class var internalSharedInstance : LockerUI {
         return sharedInstance
