@@ -128,10 +128,10 @@ internal enum LockerUIActivities: String {
         }
     }
     
-//    public var supportedInterfaceOrientations : UIInterfaceOrientationMask
-//    {
-//        return UIInterfaceOrientationMask.All
-//    }
+    public var supportedInterfaceOrientations : UIInterfaceOrientationMask
+    {
+        return UIInterfaceOrientationMask.all
+    }
     
     
     class func getBundle() -> Bundle
@@ -408,6 +408,7 @@ internal enum LockerUIActivities: String {
     
     //MARK: -
     //--------------------------------------------------------------------------
+    @discardableResult
     public func useLockerUIOptions( _ options: LockerUIOptions ) -> LockerUI
     {
         self.lockerUIOptions = options
