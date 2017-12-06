@@ -496,7 +496,7 @@ internal enum LockerUIActivities: String {
             }
         }
         
-        self.pushLockerUIController( statusController )
+        self.pushLockerUIController( statusController, animated: animated )
     }
     
     //MARK: -
