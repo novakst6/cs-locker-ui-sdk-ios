@@ -162,7 +162,7 @@ internal enum LockerUIActivities: String {
     
     fileprivate static var _sharedInstance : LockerUI?
     
-    internal class var internalSharedInstance : LockerUI {
+    internal class var internalSharedInstance : LockerUI{
         return sharedInstance
     }
     
